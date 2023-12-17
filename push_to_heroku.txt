@@ -1,0 +1,5 @@
+docker build -t my-remote-fetch-agent .
+heroku container:push web -a=my-remote-fetch-agent
+heroku container:release web -a=my-remote-fetch-agent
+
+# heroku ps:scale web=0 --app my-remote-fetch-agent
